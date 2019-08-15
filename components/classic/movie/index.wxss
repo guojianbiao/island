@@ -1,0 +1,4 @@
+.movie-title {
+  width: 46rpx;
+  height: 142rpx;
+}
