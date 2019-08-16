@@ -1,0 +1,5 @@
+<view>
+  <image src="{{ img }}"></image>
+  <image src="images/essay@tag.png"></image>
+  <text>{{ content }}</text>
+</view>

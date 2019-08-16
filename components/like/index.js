@@ -32,6 +32,13 @@ Component({
         count,
         like: !like
       })
+
+      // 定义一个标志位判断是点赞收藏还是取消
+      let behavior = this.properties.like ? 'like' : 'cancle'
+      // 触发一个like事件，把behavior传进去，在监听这个事件的地方可以通过event中的detail对象访问behavior
+      this.triggerEvent('like', {
+        behavior: behavior
+      }, {})
     }
   }
 })

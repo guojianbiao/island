@@ -1,2 +1,17 @@
-<v-like like="{{ classic.like_status }}" count="{{ classic.fav_nums }}" />
-<v-movie img="{{ classic.image }}" content="{{ classic.content }}" />
+<!-- <wxs module="m1">
+  var getIndex = function(index) {
+    return index < 10 ? '0' + index : index
+  }
+  module.exports.message = getIndex;
+</wxs> -->
+
+
+<view class="container">
+  <view class="header">
+    <!-- <v-epsoide class="epsoide" index="{{ m1.message(classic.index) }}" /> -->
+    <v-epsoide class="epsoide" index="{{ classic.index }}" />
+    <v-like class="like" bindlike="onlike" like="{{ classic.like_status }}" count="{{ classic.fav_nums }}" />
+  </view>
+  <v-movie img="{{ classic.image }}" content="{{ classic.content }}" />
+  <v-navi class="navi" bindleft="onPrev" bindright="onNext" title="{{ classic.title }}" last="{{ last }}" first="{{ first }}" />
+</view>
