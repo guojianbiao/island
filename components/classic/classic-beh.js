@@ -8,6 +8,9 @@ let classicBeh = Behavior({
     },
     content: {
       type: String
+    },
+    hidden: {
+      type: Boolean
     }
   },
   data: {

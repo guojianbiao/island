@@ -15,6 +15,15 @@ class LikeModel extends HTTP {
       }
     })
   }
+
+  // 获取点赞信息
+  getClassicLikeStatus(artId, category, sCallback) {
+    this.request({
+      // url: 'classic/' + category + '/' + artId + '/favor',
+      url: `classic/${category}/${artId}/favor`,
+      success: sCallback
+    })
+  }
 }
 
 export { LikeModel }
