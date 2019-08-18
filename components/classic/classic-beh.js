@@ -1,4 +1,4 @@
-let classicBeh = Behavior({
+const classicBeh = Behavior({
   /**
    * 组件的属性列表
    */
