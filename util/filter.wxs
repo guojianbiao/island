@@ -1,0 +1,17 @@
+var format = function(text) {
+  // 因为book-detail.js中的data初始化了一个book，所以执行的时候数据会执行两次，第一次执行data中的，第二次执行setData中的，所以需要判断一下
+  if(!text) {
+    return
+  }
+  var reg = getRegExp("\\\\n", "g")
+  return text.replace(reg, "\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+}
+
+var limit = function(array, length) {
+  return array.slice(0, length)
+}
+
+module.exports = {
+  format: format,
+  limit: limit
+}

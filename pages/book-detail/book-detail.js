@@ -1,7 +1,11 @@
 import {
   BookModel
 } from '../../models/book.js'
+import {
+  LikeModel
+} from '../../models/like.js'
 const bookModel = new BookModel()
+const likeModel = new LikeModel()
 
 
 Page({
@@ -43,6 +47,12 @@ Page({
         likeCount: res.fav_nums
       })
     })
+  },
+
+  onLike: function(event) {
+    let behavior = event.detail.behavior
+    let artId = this.data.book.id
+    likeModel.like(behavior, artId, 400)
   },
 
   /**
