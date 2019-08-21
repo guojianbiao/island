@@ -18,8 +18,7 @@ Page({
     comments: [],
     likeStatus: false,
     likeCount: 0,
-    posting: false,
-    tips: '加载中...'
+    posting: false
   },
 
   /**

@@ -8,8 +8,7 @@
   </view>
   <view class="sub-container">
     <text class="headline">短评</text>
-    <!-- <text class="shadow" wx:if="{{ !comments.length }}">还没有短评</text> -->
-    <v-loading type="circle" wx:if="{{ !comments.length }}" tip="{{tips}}"/>
+    <text class="shadow" wx:if="{{ !comments.length }}">加载中...</text>
     <view class="comments-container">
       <block wx:for="{{ util.limit(comments, 15) }}" wx:key="*this">
         <v-tag tag-class="{{ tool.highlight(index) }}" text="{{ item.content }}">
