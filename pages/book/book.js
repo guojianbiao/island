@@ -10,7 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books: []
+    books: [],
+    searching: false
   },
 
   /**
@@ -22,6 +23,18 @@ Page({
       this.setData({
         books: res
       })
+    })
+  },
+
+  onShowSearch() {
+    this.setData({
+      searching: true
+    })
+  },
+
+  onHideSearch() {
+    this.setData({
+      searching: false
     })
   },
 
