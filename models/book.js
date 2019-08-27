@@ -49,6 +49,17 @@ class BookModel extends HTTP {
       method: "POST"
     })
   }
+
+  // 获取书籍搜索数据
+  search(start, q) {
+    return this.request({
+      url: `/book/search?summary=1`,
+      data: {
+        start: start,
+        q: q
+      }
+    })
+  }
 }
 
 export { BookModel }

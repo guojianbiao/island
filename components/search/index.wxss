@@ -77,6 +77,20 @@
   line-height: 30rpx;
 }
 
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 630rpx;
+  padding-left: 30rpx;
+  margin-top: 24rpx;
+}
+
+.tag {
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
 .chunk {
   width: 10rpx;
   height: 30rpx;
@@ -86,4 +100,18 @@
 
 .hot-search {
   margin-top: 70rpx;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 570rpx;
+  margin-top: 100rpx;
+  padding: 0 90rpx;
+}
+
+.book {
+  margin-bottom: 25rpx;
 }

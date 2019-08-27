@@ -1,4 +1,8 @@
-class KeywordModel {
+import {
+  HTTP
+} from '../util/http-p.js'
+
+class KeywordModel extends HTTP {
   key = 'q'
   maxLength = 10
   // 获取搜索历史记录,直接从缓存中获取
@@ -13,7 +17,9 @@ class KeywordModel {
 
   // 获取热门搜索数据
   getHot() {
-
+    return this.request({
+      url: `/book/hot_keyword`
+    })
   }
 
   // 搜索的值存入缓存,是一个数组，不是单个值
